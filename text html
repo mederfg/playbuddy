@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: "Arial", sans-serif;
-  background: #ffffff;
+  font-family: "Inter", sans-serif;
   color: #222;
+  background: linear-gradient(135deg, #dff3ff, #f6eaff);
 }
 
 /* Navbar */
@@ -11,80 +11,99 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 18px 40px;
-  background: black;
-  color: white;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
 }
 .navbar a {
-  margin-left: 20px;
-  color: white;
+  margin-left: 25px;
+  color: #333;
   text-decoration: none;
-  font-size: 15px;
+  font-weight: 500;
 }
-.nav-btn {
-  padding: 8px 14px;
-  border: 1px solid white;
-  border-radius: 6px;
+.logo {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 /* Hero */
 .hero {
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(180deg, #ffffff, #e9f3ff);
+  padding: 120px 20px 100px;
 }
 .hero h1 {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 54px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #111;
 }
 .hero p {
-  margin: 15px auto 30px;
   max-width: 600px;
+  margin: auto;
+  font-size: 18px;
   color: #555;
+  margin-bottom: 35px;
 }
+
 .btn-primary {
-  display: inline-block;
-  padding: 14px 30px;
-  background: #007bff;
+  background: linear-gradient(135deg, #3c84ff, #6e5bff);
+  padding: 14px 32px;
+  border-radius: 10px;
   color: white;
-  border-radius: 8px;
   font-size: 18px;
   text-decoration: none;
+  transition: 0.3s;
 }
 .btn-primary:hover {
-  background: #005dc0;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(90, 90, 255, 0.35);
 }
 .btn-primary.disabled {
-  background: gray;
+  background: #aaa;
+  cursor: not-allowed;
 }
 
 /* Features */
 .features {
   text-align: center;
-  padding: 70px 20px;
+  padding: 90px 20px;
 }
-.features .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  max-width: 500px;
+.features h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+.grid {
+  max-width: 800px;
   margin: auto;
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .card {
-  padding: 20px;
-  border-radius: 10px;
-  background: white;
-  border: 1px solid #ddd;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  font-size: 16px;
+  backdrop-filter: blur(10px);
 }
 
 /* Download Section */
 .download {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 25px;
+  padding: 40px;
   color: #666;
+  font-size: 15px;
 }
