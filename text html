@@ -1,18 +1,18 @@
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #dff3ff, #f7e8ff);
   color: #222;
-  background: linear-gradient(135deg, #dff3ff, #f6eaff);
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 40px;
-  backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
@@ -24,29 +24,39 @@ body {
   font-weight: 500;
 }
 .logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
 }
 
-/* Hero */
+/* HERO */
 .hero {
-  text-align: center;
-  padding: 120px 20px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 80px 40px;
+  gap: 40px;
+}
+.hero-text {
+  flex: 1;
 }
 .hero h1 {
   font-size: 54px;
   font-weight: 800;
-  margin-bottom: 10px;
-  color: #111;
+  margin-bottom: 12px;
 }
 .hero p {
-  max-width: 600px;
-  margin: auto;
   font-size: 18px;
-  color: #555;
-  margin-bottom: 35px;
+  max-width: 600px;
+  margin-bottom: 30px;
+  color: #444;
+}
+.hero-img img {
+  width: 520px;
+  border-radius: 22px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
 }
 
+/* BUTTONS */
 .btn-primary {
   background: linear-gradient(135deg, #3c84ff, #6e5bff);
   padding: 14px 32px;
@@ -55,30 +65,31 @@ body {
   font-size: 18px;
   text-decoration: none;
   transition: 0.3s;
+  display: inline-block;
 }
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(90, 90, 255, 0.35);
+  box-shadow: 0 8px 25px rgba(90, 90, 255, 0.35);
 }
 .btn-primary.disabled {
-  background: #aaa;
+  background: #999;
   cursor: not-allowed;
 }
 
-/* Features */
+/* FEATURES */
 .features {
   text-align: center;
   padding: 90px 20px;
 }
 .features h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-size: 36px;
+  margin-bottom: 50px;
 }
 .grid {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   display: grid;
-  gap: 20px;
+  gap: 25px;
 }
 @media (min-width: 700px) {
   .grid {
@@ -86,24 +97,33 @@ body {
   }
 }
 .card {
-  padding: 24px;
+  padding: 30px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.75);
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  font-size: 16px;
-  backdrop-filter: blur(10px);
+  border: 1px solid #ddd;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+.card img {
+  width: 70px;
+  margin-bottom: 12px;
 }
 
-/* Download Section */
+/* DOWNLOAD */
 .download {
+  padding: 120px 20px;
   text-align: center;
-  padding: 100px 20px;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 40px;
-  color: #666;
-  font-size: 15px;
+  padding: 35px;
+  color: #555;
+  margin-top: 50px;
 }
